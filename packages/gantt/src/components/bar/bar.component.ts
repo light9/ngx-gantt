@@ -86,11 +86,13 @@ export class GanttBarComponent implements OnInit, AfterViewInit, OnChanges, OnDe
     }
 
     private setPositions() {
-        const barElement = this.elementRef.nativeElement;
-        barElement.style.left = this.item.refs.x + 'px';
-        barElement.style.top = this.item.refs.y + 'px';
-        barElement.style.width = this.item.refs.width + 'px';
-        barElement.style.height = this.ganttRef.styles.barHeight + 'px';
+        if (this.item.refs) {
+            const barElement = this.elementRef.nativeElement;
+            barElement.style.left = this.item.refs.x + 'px';
+            barElement.style.top = this.item.refs.y + 'px';
+            barElement.style.width = this.item.refs.width + 'px';
+            barElement.style.height = this.ganttRef.styles.barHeight + 'px';
+        }
     }
 
     private setContentBackground() {

@@ -13,6 +13,7 @@ import { GanttMainComponent } from './components/main/gantt-main.component';
 import { GanttIconComponent } from './components/icon/icon.component';
 import { GanttDragBackdropComponent } from './components/drag-backdrop/drag-backdrop.component';
 import { GanttLinksComponent } from './components/links/links.component';
+import { RecursiveTemplateComponent } from './components/recursive-template/recursive-template.component';
 
 @NgModule({
     imports: [CommonModule],
@@ -28,7 +29,8 @@ import { GanttLinksComponent } from './components/links/links.component';
         GanttLinksComponent,
         GanttBarComponent,
         GanttIconComponent,
-        GanttDragBackdropComponent
+        GanttDragBackdropComponent,
+        RecursiveTemplateComponent
     ],
     providers: []
 })

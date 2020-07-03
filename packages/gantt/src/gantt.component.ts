@@ -169,6 +169,8 @@ export class NgxGanttComponent extends GanttUpper implements GanttRef, OnInit, A
             item.setExpand(false);
             this.expandChange.emit();
         }
+
+        // this.cdr.detectChanges();
     }
 
     ngOnDestroy() {

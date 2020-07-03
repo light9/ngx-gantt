@@ -1,0 +1,11 @@
+<ng-container [ngTemplateOutlet]="list" [ngTemplateOutletContext]="{ items: data, level: 0 }"></ng-container>
+<ng-template #list let-items="items" let-level="level">
+  <ng-container *ngFor="let item of items; trackBy: trackBy">
+    <ng-template [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{ item: item, level: level }"></ng-template>
+    <ng-template
+      *ngIf=" item['expanded'] && childrenResolve(item) as children "
+      [ngTemplateOutlet]="list"
+      [ngTemplateOutletContext]="{ items: children }"
+    ></ng-template>
+  </ng-container>
+</ng-template>
